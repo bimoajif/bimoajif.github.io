@@ -7,6 +7,7 @@
   mix-blend-mode: multiply;
   filter: blur(75px);
   position: absolute;
+  z-index: -10;
   top: 30vh;
   left: 30vw;
 }
@@ -20,6 +21,7 @@
   mix-blend-mode: multiply;
   filter: blur(40px);
   position: absolute;
+  z-index: -10;
   top: 50vh;
   right: 30vw;
 }
