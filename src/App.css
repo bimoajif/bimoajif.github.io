@@ -1,8 +1,77 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.asset_1 {
+  width: 355px;
+  height: 354px;
+  flex-shrink: 0;
+  border-radius: 355px;
+  background: #F9DBFA;
+  mix-blend-mode: multiply;
+  filter: blur(75px);
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
+}
+
+.asset_2 {
+  width: 244px;
+  height: 233px;
+  flex-shrink: 0;
+  border-radius: 355px;
+  background: #BEF9F6;
+  mix-blend-mode: multiply;
+  filter: blur(40px);
+  position: absolute;
+  top: 50vh;
+  right: 30vw;
+}
+
+@media screen and (min-width: 600px) {
+
+  /* For Tablets */
+  .container {
+    width: 100;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  /* For Laptops */
+  .container {
+    width: 738px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  /* For Large Laptops */
+  .container {
+    width: 962px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  /* For Big TV's (HD Screens)  */
+
+  .container {
+    width: 1250px;
+  }
+}
+
+
+@media screen and (min-width: 1920px) {
+
+  /* For Projectors or Higher Resolution Screens (Full HD) */
+  .container {
+    width: 1890px;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+
+  /* For 4K Displays (Ultra HD) */
+  .container {
+    width: 3810px;
+  }
 }
 
 .logo {
@@ -11,9 +80,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +93,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

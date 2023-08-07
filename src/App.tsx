@@ -1,63 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import Home from './Home'
-import About from './About'
+import bolt from './assets/bolt.svg'
+import HeaderCard from './components/cards.header'
+import FrameworkLogo from './components/frameworklogos.skills'
 import './App.css'
 
 function App() {
-  return (
-    <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+  return (
+    <main>
+      <section className='h-[90vh] flex flex-col py-[20vh] items-center gap-10'>
+        <HeaderCard />
+        <h1 className='text-3xl font-extrabold md:w-[45%] lg:w-[45%] text-black mx-5'>Bimo is a fresh graduate IT student based in
+          <span className="text-red-600">
+            &nbsp;Indonesia
+          </span>
+        </h1>
+        <p className='text-sm text-gray-500 md:w-[35%] lg:w-[35%] mx-12'>I love to design software, explore new tech, & listening music. Currently, i’m focusing on UI/UX design and mobile development using flutter.</p>
+        <span className='asset_1'></span>
+        <span className='asset_2'></span>
+      </section>
+      <section className='flex flex-col py-[10vh] items-center gap-12 bg-slate-50 rounded-[4em]'>
+        <div className='flex flex-col items-center gap-4'>
+          <img src={bolt} className=' w-12' />
+          <h1 className='text-3xl text-gray-500 font-extrabold'>
+            What are <span className='text-black'>my skills</span>
+          </h1>
+        </div>
+        <div className='flex flex-col items-center gap-3'>
+          <p className='text-gray-500 text-sm'>tools & frameworks i usually use:</p>
+          <FrameworkLogo />
+        </div>
+      </section>
+    </main>
   );
 }
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
 
 export default App
