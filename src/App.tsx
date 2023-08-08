@@ -1,6 +1,4 @@
 import bolt from './assets/bolt.svg'
-import bg from './assets/bg.png'
-import HeaderCard from './components/cards.header'
 import FrameworkLogo from './components/frameworklogos.skills'
 import './App.css'
 
