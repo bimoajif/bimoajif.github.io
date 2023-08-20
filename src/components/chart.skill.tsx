@@ -3,13 +3,25 @@ import { Radar } from 'react-chartjs-2';
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
-export const data = {
-  labels: ['UI/UX', 'design', 'web dev', 'data', 'mobile dev', 'software dev',],
+export const soft_data = {
+  labels: ['software dev', 'git', 'react', 'flutter', 'python', 'tailwind CSS'],
   datasets: [
     {
-      data: [9, 11, 7, 6, 9, 8],
+      data: [10, 7, 8, 9, 5, 8],
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 2,
+    },
+  ],
+};
+
+export const des_data = {
+  labels: ['design', 'figma', 'adobe illustrator', 'adobe photoshop', 'research', 'wireframing'],
+  datasets: [
+    {
+      data: [9, 10, 11, 8, 7, 9],
+      backgroundColor: 'rgba(239, 167, 70, 0.2)',
+      borderColor: 'rgba(239, 167, 70, 1)',
       borderWidth: 2,
     },
   ],
@@ -39,12 +51,18 @@ export const options = {
   },
   maintainAspectRatio: false,
 };
-
+// million-ignore
 export default function Chart() {
   return (
-    <div className='h-[45vh]'>
-      {/* <h1 className='text-center font-extrabold underline'>Hard Skills</h1> */}
-      <Radar data={data} height={100} width={500} options={options} />
-    </div>
+    <section className='flex h-[45vh] justify-center my-10 font-extrabold text-center'>
+      <div>
+        <h1>programming skills</h1>
+        <Radar data={soft_data} height={200} width={400} options={options} />
+      </div>
+      <div>
+        <h1>UI/UX skills</h1>
+        <Radar data={des_data} height={200} width={400} options={options} />
+      </div>
+    </section>
   );
 }
